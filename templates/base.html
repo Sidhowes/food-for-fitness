@@ -14,55 +14,31 @@
 <body>
 
     <header>
-        <!--top navbar-->
+    <!--top navbar-->
 		<nav class="nav-extended green darken-1 text-shadow">
 			<div class="nav-wrapper">
-				<ul class="right">
-					<li><a href="#">Home</a></li>
+				<h1><a href="{{ url_for('get_recipes') }}" class="brand-logo">Food For Fitness</a></h1>
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+					<li><a href="#">Popular Recipes</a></li>
 					<li><a href="#">Add Recipe</a></li>
-					<li><a href="#">Profile</a></li>
-					<li><a href="#">Log In</a></li>
-					<li><a href="#">Log Out</a></li>
-					<li><a href="#">Sign Up</a></li>
 				</ul>
 			</div>
 		</nav>
+		<!--mobile sidenav-->
+		<ul class="sidenav" id="mobile-demo">
+            <li><h4 class="center-align green-text text-darken-1"></h4>Food For Fitness</li>
+			<li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+			<li><a href="#">Popular Recipes</a></li>
+			<li><a href="#">Add Recipe</a></li>
+		</ul>
     </header>
 
-	<!--- main img -->
-	<div class="main-logo">
-		<a href="#"><img src="https://res.cloudinary.com/dnk59j2my/image/upload/v1603738025/Add_a_heading_4_ct6mnx.jpg"
-	        class="img-fluid"></a>
-	</div>
-
-    <!--under main image navbar-->
-	<nav class="nav-extended green darken-1 text-shadow">
-		<div class="nav-wrapper">
-			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
-			<ul class="left hide-on-med-and-down">
-				<li><a href="#">Weight Loss</a></li>
-				<li><a href="#">Lean Muscle</a></li>
-				<li><a href="#">Bulid Muscle</a></li>
-				<li><a href="#">Other</a></li>
-			</ul>
-		</div>
-	</nav>
-	<!--mobile nav burger-->
-	<ul class="sidenav" id="mobile-demo">
-        <li><h4 class="center-align green-text text-darken-1"></h4>Food For Fitness</li>
-		<li><a href="#">Weight Loss</a></li>
-		<li><a href="#">Lean Muscle</a></li>
-		<li><a href="#">Bulid Muscle</a></li>
-		<li><a href="#">Other</a></li>
-	</ul>
     
+    {% block content %}
+    {% endblock %}
     
-
-
-    <div class="container">
-        {% block content %}
-        {% endblock %}
-    </div>
 
     <!--footer-->
 	<footer class="page-footer green darken-1 text-shadow">
@@ -76,7 +52,7 @@
 				</div>
 				<div class="col l4 offset-l2 s12">
 					<ul>
-						<li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+						<li><a class="grey-text text-lighten-3" href="#">Home</a></li>
 						<li><a class="grey-text text-lighten-3" href="#!">Add Recipe</a></li>
 						<li><a class="grey-text text-lighten-3" href="#!">Profile</a></li>
 						<li><a class="grey-text text-lighten-3" href="#!">Log In</a></li>

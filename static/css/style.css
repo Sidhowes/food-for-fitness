@@ -33,4 +33,11 @@ social-links {
     background: #43A047;
 }
 
+.hero-image {
+    width: 100%;
+    margin-top: 20px;
+}
 
+.recipe-headline {
+    font-family: Dancing script;
+}

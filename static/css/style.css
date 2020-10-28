@@ -41,3 +41,8 @@ social-links {
 .recipe-headline {
     font-family: Dancing script;
 }
+
+.form-img {
+    width: 100%;
+    opacity: 0.5;
+}

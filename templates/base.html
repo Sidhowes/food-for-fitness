@@ -17,10 +17,10 @@
     <!--top navbar-->
 		<nav class="nav-extended green darken-1 text-shadow">
 			<div class="nav-wrapper">
-				<h1><a href="{{ url_for('index') }}" class="brand-logo">Food For Fitness</a></h1>
+				<h1><a href="{{ url_for('get_recipes') }}" class="brand-logo">Food For Fitness</a></h1>
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
 				<ul class="right hide-on-med-and-down">
-					<li><a href="{{ url_for('index') }}">Home</a></li>
+					<li><a href="{{ url_for('get_recipes') }}">Home</a></li>
 					<li><a href="#">Popular Recipes</a></li>
 					<li><a href="#">Add Recipe</a></li>
 				</ul>
@@ -29,15 +29,16 @@
 		<!--mobile sidenav-->
 		<ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align green-text text-darken-1"></h4>Food For Fitness</li>
-			<li><a href="{{ url_for('index') }}">Home</a></li>
+			<li><a href="{{ url_for('get_recipes') }}">Home</a></li>
 			<li><a href="#">Popular Recipes</a></li>
 			<li><a href="#">Add Recipe</a></li>
 		</ul>
     </header>
 
-    
-    {% block content %}
-    {% endblock %}
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
     
 
     <!--footer-->

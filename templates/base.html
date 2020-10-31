@@ -53,12 +53,10 @@
 				</div>
 				<div class="col l4 offset-l2 s12">
 					<ul>
-						<li><a class="grey-text text-lighten-3" href="#">Home</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Add Recipe</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Profile</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Log In</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Log Out</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Sign In</a></li>
+						<li><a class="grey-text text-lighten-3" href="{{ url_for('get_recipes') }}">Home</a></li>
+						<li><a class="grey-text text-lighten-3" href="#!">Popular Recipe</a></li>
+						<li><a class="grey-text text-lighten-3" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+						
 					</ul>
 				</div>
 			</div>
@@ -66,32 +64,24 @@
 		<div class="footer-copyright">
 			<div class="container">
 				© 2020 Sidney Howes
-			<ul class="list-inline social-links right">
-				<li class="list-inline-item">
-					<a href="https://www.facebook.com/" target="_blank">
-						<i class="fab fa-facebook-square" aria-hidden="true"></i>
-						<span class="sr-only">Facebook</span>
-					</a>
-				</li>
-				<li class="list-inline-item">
-					<a href="https://twitter.com/" target="_blank">
-						<i class="fab fa-twitter-square" aria-hidden="true"></i>
-						<span class="sr-only">Twitter</span>
-					</a>
-				</li>
-				<li class="list-inline-item">
-					<a href="https://www.instagram.com/" target="_blank">
-						<i class="fab fa-instagram" aria-hidden="true"></i>
-						<span class="sr-only">Instagram</span>
-					</a>
-				</li>
-				<li class="list-inline-item">
-					<a href="https://www.linkedin.com/" target="_blank">
-						<i class="fab fa-linkedin" aria-hidden="true"></i>
-						<span class="sr-only">Linkedin</span>
-					</a>
-				</li>
-			</ul>
+			<div class="social-links right">
+				<a href="https://www.facebook.com/" target="_blank">
+					<i class="fab fa-facebook-square" aria-hidden="true"></i>
+					<span class="sr-only">Facebook</span>
+				</a>
+				<a href="https://twitter.com/" target="_blank">
+					<i class="fab fa-twitter-square" aria-hidden="true"></i>
+					<span class="sr-only">Twitter</span>
+				</a>
+				<a href="https://www.instagram.com/" target="_blank">
+					<i class="fab fa-instagram" aria-hidden="true"></i>
+					<span class="sr-only">Instagram</span>
+				</a>
+				<a href="https://www.linkedin.com/" target="_blank">
+					<i class="fab fa-linkedin" aria-hidden="true"></i>
+					<span class="sr-only">Linkedin</span>
+				</a>
+			</div>
 			</div>
 		</div>
 	</footer>

@@ -12,7 +12,7 @@ social-links {
     padding-bottom: 15px;
 }
 
-.social-links li a i {
+.social-links a i {
     margin-top: 15px;
     width: 32px;
     height: 32px;
@@ -29,7 +29,7 @@ social-links {
     -o-transition: all 0.35s ease-in-out;
 }
 
-.social-links li a i:hover {
+.social-links a i:hover {
     background: #43A047;
 }
 
@@ -45,3 +45,4 @@ social-links {
 .form-img {
     width: 100%;
 }
+

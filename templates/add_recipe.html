@@ -32,7 +32,7 @@
 				<div class="input-field col s12">
 					<i class="fas fa-align-left prefix green-text darken-1"></i>
 					<textarea id="recipe_description" name="recipe_description" minlength="5"
-		                    maxlength="500" class="materialize-textarea validate"></textarea>
+		                    maxlength="500" class="materialize-textarea validate" required></textarea>
 					<label for="recipe_description">Description</label>
 					<small class="form-text">short description of the dish. max 500 words.</small>
 				</div>
@@ -42,8 +42,8 @@
 				<div class="input-field col s12">
 					<i class="fas fa-image prefix green-text darken-1"></i>
 					<label for="img_url">Image Url</label>
-					<input required type="text" class="form-control" name="img_url" id="img_url"
-						    aria-describedby="recipe description">
+					<input required type="text" class="form-control validate" name="img_url" id="img_url"
+						    aria-describedby="recipe description" required>
 					<small type="url" class="form-text">Picture of the dish.
 					        Use a valid URL</small>
 				</div>
@@ -53,9 +53,9 @@
 				<div class="input-field col s12">
 					<i class="fas fa-clock prefix green-text darken-1"></i>
 					<label for="cook_time">Cooking Time</label>
-					<input required type="text" class="form-control" id="cook_time"
+					<input required type="text" class="form-control validate" id="cook_time"
 		                    name="cook_time" aria-describedby="cooking time"
-		                        placeholder="X hours X minutes" maxlength="20">
+		                        placeholder="X hours X minutes" maxlength="20" required>
 					<small class="form-text">Example: "1 hour 10 minutes"</small>
 				</div>
 			</div>
@@ -65,7 +65,7 @@
 					<i class="fas fa-align-left prefix green-text darken-1"></i>
 					<label for="ingredients">Ingredients</label>
 					<textarea id="ingredients" name="ingredients" minlength="5"
-		                    maxlength="800" class="materialize-textarea validate"></textarea>
+		                    maxlength="800" class="materialize-textarea validate" required></textarea>
 					<small class="form-text">Each ingredient on it's own line. No empty lines.</small>
 				</div>
 			</div>
@@ -75,7 +75,7 @@
 					<i class="fas fa-align-left prefix green-text darken-1"></i>
 					<label for="instructions">Instructions</label>
 					<textarea id="instructions" name="instructions" minlength="5"
-		                    maxlength="800" class="materialize-textarea validate"></textarea>
+		                    maxlength="800" class="materialize-textarea validate" required></textarea>
 					<small class="form-text">Each ingredient on it's own line. No empty lines.</small>
 				</div>
 			</div>

@@ -21,7 +21,7 @@
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="{{ url_for('get_recipes') }}">Home</a></li>
-					<li><a href="#">Popular Recipes</a></li>
+					<li><a href="{{ url_for('popular') }}">Popular Recipes</a></li>
 					<li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
 				</ul>
 			</div>
@@ -30,7 +30,7 @@
 		<ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align green-text text-darken-1"></h4>Food For Fitness</li>
 			<li><a href="{{ url_for('get_recipes') }}">Home</a></li>
-			<li><a href="#">Popular Recipes</a></li>
+			<li><a href="{{ url_for('popular') }}">Popular Recipes</a></li>
 			<li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
 		</ul>
     </header>

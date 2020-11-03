@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% block content %}
+
+     <section>
+        <img class="hero-image" src="https://www.berkeleywellness.com/sites/default/files/field/image/iStock-919666108-2_field_img_intro_774_500.webp" alt=""> 
+    </section>
+
+    <section class="featured">
+        <div class="recipe-headline center-align green-text darken-1">
+            <h2>Our Popular Recipes</h2>
+        </div>
+    </section>
+
+
+    <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://cdn.shopify.com/s/files/1/0262/7073/articles/recipe-salmon-poached-egg-bagel_1200x1200.jpg?v=1592268348">
+        </div>
+        <div class="card-content">
+            <span class="card-title">Salmon and Poached egg Bagel</span>
+          <i class="fas fa-folder-open prefix green-text darken-1"></i><p>Lean Gains</p>
+          <i class="fas fa-clock prefix green-text darken-1"></i><p>10 Minutes</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/insert_main_wide_image/public/2019/08/best-healthy-meal-delivery-services-prep-kitchen-chicken.jpg?itok=QbF7zYRB">
+        </div>
+        <div class="card-content">
+            <span class="card-title">Peri Chicken served with peas and rice</span>
+          <i class="fas fa-folder-open prefix green-text darken-1"></i><p>Build Muscle</p>
+          <i class="fas fa-clock prefix green-text darken-1"></i><p>45 Minutes</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/2019-w24-r4-chicken-caesar-salad-915d0730.jpg">
+        </div>
+        <div class="card-content">
+            <span class="card-title">Chicken Ceaser Salad</span>
+          <i class="fas fa-folder-open prefix green-text darken-1"></i><p>Fat Loss</p>
+          <i class="fas fa-clock prefix green-text darken-1"></i><p>25 Minutes</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSEhIVFhUXFxgVGBcWFxcYFxcYFhcWFxgVFxUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0mHyUtLy0tLS0tLS0tLS0wLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0vLS0tLS0tLS0tLS0tLf/AABEIAMUBAAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAAEDBQYCBwj/xABDEAABAwIEAwUGBAMGBAcAAAABAAIRAyEEEjFBBVFhBiJxkaETMkKBsfBSwdHhI2JyBxQzgqLxFRaS0zRDU1RzwtL/xAAbAQACAwEBAQAAAAAAAAAAAAAAAQIDBAUGB//EACwRAAICAQQABQIHAQEAAAAAAAABAgMRBBIhMQUTIkFRYbEUMnGBkdHwwRX/2gAMAwEAAhEDEQA/APXk6eEgrDPgUJ4TpSgkNCUJSnSAZJPltOyQCMroMDJJ4SCAFCSSQCAHhNCSdADBOlCUIAYhMukyAGSTpFADJk8JJiGSTpIAZMnSTENCZOmQAoXdOB3joFyLrrE05AaDYXKz6mc4Vt1rMvZf7BZXFN89CfWkSN1CSugExCsqUlBb+/fHyRm8vgkSTwnUhDJ4STIGJdALlJAEWKq5YJNtIUlN4IkaLjEUszSPLxUPDmkAh2q50p3w1ijt9DXfw/qy/ClX9UFp0glC6JQIJJ4TQgBJwknQMZJJIIAaEoTlJAHMJl0mKBDJJKp412gpYYsa+XPebMblzBu7zmcAGhDYJNvCLZJZHB/2gYWpimYYGPaAlryQLgkQ5rgCJgxErWlCafQ5RlHtClIql4h2owtLOHVQ51OC9jbuAJAzQYtcXU3DuP0K9R1Km+XtaHkQR3XAEEEi+o808oW2WM4LSFyV0npskoFg7oiBm32Ub3KIvLnzcAWXazaa7zk5Yws4X1+pbYti2jJJ4SWopOsyYuTp8qiSEHJ1zlXQQA8Jl0kUDOQoKgykO80QuajZBUZLKHF4Yqb5XcoDA4qTlIgo8BZ9HqIX17ovPsTsg4ywOEkoTFaSsdJJNKAEkkkmApSTSlKAHTQnlVePxri/2VMwQJe78IOgH8xQNLLwjjtDxMUqLy17RUi06A7kxyEmN4Xi3G8c+oyu+k51UWpe2DixxpgBzqbac94Z3e847jwHq+PwjajDTIIbBBLSQ4ZgQSCLzf5/NeW8Q7JVHVxScW0aEwDSb7wi5A+F5DQCe9Lo5qE3xk6FenceFy2R16mMpCoHUcO2m5vtMuYOa15LKbSyQXOe0yTNiHm+k2A/tDr1GNwgZ7Os4ZfaAiGMDbPIA5Q6BzAWi4lw3DVoFRocW2BJcHNbaZdPcPdFmxp0WcqdkcO2uX0q72zDCwgVGuEh2Ul0OIlrd9oWdaiHyav/ADrsZSyUuNe4PZ7Olhw2pTdTEVDLsri41qmaMpIYYDidbSYVdwis9rw6kKjajXXh8MzOlzQDt3QOe/NaLiXZctDqzPY1vdOV1M02gMJJAFxmJ8NdVmsd7TMKtWm5jnhzmlhFyQIZDZAAMa8yrYSU1wZbq5VPE+D3LgnaA16FOtdpcDLdYIJBAJFxIK0tbECnTHtHBpOpNgOi8o7CcWmkGBpyst3gQZN3f6sx+a33tS9suvcRP7qXJJ0wkotL9SxwvEqVSzHgkWjTy5ouFmKmGZrljqP2RmDxzmWJLm9feHgd/AqaZRbo33AuoSXNOoHCWmQU5UjC1gkCZKUpSGOEkkkAdBJMUpQMdMU6YpABVcOGvz+aOaVDVe2IJCgoPIMbaFZlCFD9EeG+cfL9y/mceQ5JD/3xnXySGMbz9FpyQ8ufwwhMh6mOptgue0SQBJiSdAJ3QuH43h3uLG1mZhMtJykRrZ0IyR2S+GWJKZJIpkBSkknQA0LPYImaziLuqHyAH6rRKmNIMqP/AAuMnoTv4I9i6l4nkhDreKouOuLBIsSYGtptJ5rR18OWmPvxUDmyY5b/AKWuqpx3RaO1RaoSUu0YCpimDUOBsLH3iJJLj84sgf7w2bfXdbDifZanUOZpyOnlLTPNsj6qrPYp0/44mNDT/LMua9DP6Hcj4lTjjJTY7ETRfTzHvCQ47XBOhBJttzVh2W7MYU0x7TPVc38TnBgBMiGA7ZWiTOiIp9iXZu/iAQLhobH5rScO4Y2kLGfkFu09brjhnL1ttV09yJMHwylSn2dMNkyY5ndGgiIGv3oojV1somvgq9mHaS1gomHqlUfyUIkn7t80iyK4DsDiSyoB8LtenJ33t4K8WXJjM7bKQOpPVakBSXRzNbFKzgScBIJ0zIMkkkgB4XFWqG3cY/PwCjxNfKIF3HQbeJ5BVbnEySZMXO5PQbDkEmy6ql2P6BlbHH4bep8tB6oR9YnUk+P6IZ9QWG556m36KOo6BAUTpQohHpEz8TG4QmI4tlqgiQ219QPHooXMB1uuBgWkQ2ZHIkegVGo08bobW2vfK4aZo2R9wipjg6o7Ie78+V/lMqHH8Xp0gJzOdBsGvItGrmtMaoL2waG5QDIgO1ziblrBqQA4m8BUWMxRcTMuAJ11NzAI219SstuuUFiKyb6fD3ZxnBW8d7TOrinV/hhpLg2k95DhEtDnZAD7xNp1g9ABXxwpsc2lSqezqEES4GvA7rmmL5TJEECbK3rNYf4lSm1zmzDgQHDMCNR4ddVQcGxAdUdjG4YuNmCgDINMtA9qCbvqFzYsDubEZlooujdHJg1dFmlkk3lPr/fuel9hO0s4drKkAMLmjMQCBmMNmYsIHyhbWhiWv903GoOo+XLrovnnieMcC5j3vpvcchw+ZoaGe0c5lPMJnMSbzabgrYdle1YbTp0qrT3CzLVYW/wmVZc1jiXd7LZpjYtELSpfJzLKozfp7PW06C4djM4h0Zhe3uuGz29Pp5EmKZjaw8MdU/FHEPJHRXAVPxf3vkE0Xaf84NT4sLNdp128Dt4aIiWO0cPA6/v8lmseOWqq3Yx7N/08knE6Ea8flNy6mVE6fHw+t1lcJ2kqAwZgeXkfyVlS7SA6gffmlgfqXZbFm+/NRPdF79LH15oYccp8vomdxinsD6I5JRYQ933C5axxuLeP0Qw4u34WADa40UdTis8glhk0y1FNoEu15/shqlduxtzVe7HyYJmb809OrJEJqDfZFy29FjwqialUFwhje8BzI0J6THktKSqzglKGlx3MeX36KxU2jkXT3TZIklKdRICTTunlR1xLXAbgj0QBTmqXBz/xHKOjRt5n0SwjxcfZUeH/AMNw6hw8HAfm0n5qJgvB8FF9nT0yTpERck/VR1mTcA+aLfTywDp+65p0+Q/RBoUvcAZSVvw2kIM6/khWslSNEaWPMII2PcsGU7S4IUXQ3MaUEgjM72QAALZNhJN/FZnEVcsTMagbxcgnlP5r0biOGNRjmOuCIMbi24WOx3Yp2YGlVgbhzS4/IgrmXaHMt0DtaTxDbWoz7+5luJ8TZYGzSRmPT4rDpK74fjnMaGltNrHlz2spudnFNwAY0QLNEgyTeToSYtcR/Z3VdP8AEaTDgA4EAT4GfVd4HsNWpMaAWveGHMCYY52bugkQ7KBeLSQNpWuijy44OX4hfK+afsYzHNqMqWMVDTObO5pHec3uT8L4FMkC/P4obBYSvM0PidDqYDi0QA0kx/MCD+i1mE/s0rOcfbPYGyCAyXH3SCAYGXVsRy89v2d7JUcMzKwE3JLiBLiTN3au+a0Y+TnwrfvwQcCqOwuFoF9ixwBiYLXHvDyJ+a3xWD7SvBc2g3bvO6cp8/oj63a8sMENN8piY2EzsCTGihbfXVhSfYp6ed0nKHSwuWa1VPGG975fmpOHcbp1SGzlcfhO/gd/DVLiwkjw/Mqdc4zWYvKKoVTqt2zWGZjiAWfxb7m/y8dFoOIW1WYxpn5HZWs6UOSJzkzJk3P3yXAckCkSZKHEHc+inpVDF9TrCHC7pEiZ9AdB9UyIWKmgCla4oVovrbkimhAE9KJlWmDagKIVzwajmqN+7C6kii2WEzT4WllY1vT11KkIXUplWcljynlMmSGOnCYJ0AVjIFQsgb2Ojgb5Z2OhB+ShrUNXNByixn3gfwuGxXPHmw4OHJV1PjJB78yBAe33o5OGjx0KHHPJupbisxLDPIh2ux5+Ki0uD8ufRd08ZTeJBB/p/NhuPlK7YwO90g/UfLUKPRpjOIPVB+/1T0nOAvE+imqtPLxUfs9o9LILM8D5z4riTsAnuPh/2+5XVK1gITA5yk6ldwAOR67rrPCEqYtgu50nZouB6wUiOfkOw5kaW+9EJxPigp9xneqHRovHU/ohq/Ey6wOQRtr9/coA1A2S0RzcfeKko/JBpvoruLMy06ky6o4Q7cy6xHqVmMPjPhLwQ0i0OmGGSBI5uVr2hxhawZTBJifFp19FnODcIeX+1c8CmLucXRaDIncFcvXz9fL6RTKKi9qZoKeIe0BxmQM2xnkBF3HmRAC2XAuLHEUZNyzuydSNRPXqvOmYyST7InQDK4NBjSSWzFlq+wuJLxWJAacwEDYgG3O3VLRJxswuEzXCx3VTc+WmsNvr6JFlxRs6fNZjGM1Wq4jYLN41dgUGVbyo6VQn0vt1UlVqjZZItCWPjVEsKEYRc8hdEUTIB5pkWENF9UTRE308VAxF0RzTIMJohafs9SuXchHn/t6rOYYrXcFp5aQO7iXfkPQIfRj1MsRLBckpSmUTnnUpwkkAokh1XcU4zToWN3ROUcr3J209QrFeU8cxx/vle8tZUIG5c82a0dBLvRZtVbKuPpGjXM4wMS14LCx1MgG8jvzF9j3XWVJimrQcCwTRg84F6kVCeezT4EX/AMypsaxXadyda39m3TvMSnqPIMrocXqD4pA2d3vqo8WIkoF7t1fgvLX/AJgfN5B6OcB5Gy7/AOZag+J3+g/kqBzlDnS2jwjTHtLV2d6N/RRnj1Ui7j5x9FQCt0UlOqjBLCLV3EXuNyT68+akFRxvKrWVT0U1J6MEuC1pujeSuKlSQoA5NUJhAsgHG8O51NrolgJDo1FtQemvVcdnsNh2YKq97mE5ashxF+6bAHrlHitxwfhgqYWCPec4j5Q3/wCqx/H+wwM5Zic0A92ecc1TZpFbynhnOu1Ud7U1+6/7/ZisNxGoCA0t2gZWwF6B2FfAc2ZJgknUkzcrN4fsuWGy1nZfh7qbnE8h9fvzVtelVSb9yb10JzUYJJffj3LXiSzmNWgx5WbxxUjdArqpCjlNVdzXDTdRL0GUkXSQLCjabhCZGQTTKna7bdCsMqZrjO0ev7JorZaYFlw0LbMEAAbCPJY3hDwHgnQLSMxgO6eHg5OstW/aHhyRcoPaJZksGXcGudAkmALnwCyfF+Jup16lU1HtDQ1jWDQxBLi021cVqapGU5vdgzOkbrIccwzK9iS43yvJyVO7fJnpuZ3bx3uY5rDqs7Vh4NtFE7X6UXGE7QtqYcVWiXSGFvJ0geVwVksLwf2+MrMMCkHmtVeYmXgn2bXbGA6+zZ3IK7xDSxhp03uaLOa4HPmkfjqSZEOj59FXf8Rr0qdUF2aR/DLhMuMgh4BA5CdFzJ6mTsW/lL2/s3S8KuVecfx2Edse3LGubSoEeyp1KclvxFj2kgR8DQ3z9LjGi68e40yr7QmqwBx/AwMaZ5BoA+a9U4TiPaYek8xJptmDPeAh1/EFdXS2b8vPZVTVKuTjJcgeLZZVlQSriu1VVZt55LaWgdUocuRVUAoR1KOiBocOUjHKECCpWIGEMKLoBBNlWFAJDbCAE8JBc5khHoPBacYemP5Z/wCqXfmp6tAOEFd0WZWNb+FoHkIXSMnFn6myqq8LaDYLt+DDWyB/UBuN/nv8lZJnBS3tkI1xTyjIcUESPXYjYjosvj3LZcVp3NM2aAXgnVnPKfwm9j8umYxOEPs/aPEE+6NzJG3hNuips1FcM7n0djSzlNqOO+jOV72IXDCjcTw914gwLjT6oJjCLckoWws5g8nRlCdf5lgKouOiLY9C02omkFaimTCqTosi6DVBgsOXuDWNLnHYCStnw/s+2kGurd55u2k06/1HkN9hz2Q3gz2WxiVT6fs2MJ958kD+UbnxOngmZiCm4hWNSq52o0BGluXT8lw1q1RWEeU1NrstciypYso2ljfkqZika9JxTFG2SLTtZjCym1gMFxPkBvAsJi6yP/Erk5olwfEAw+4cY01M3G/NXXbp8OZJ7uUn/UZ210PyWPe9wNyATNtzzBMwAYB18YXm9bY/MZ9J8Hoj+Fi8d5+5YvxW5BMxN9QAGgxPdtNuvQKKpWBEWiRyuIVaK/I6abNGxGm0KM4gz6ROnIz96rl2Sb4OtsjEWPqNlpLQ7KQ6HAOZ3Y7rgdR05LX4fE0alNj6DG02FoPs2gAMcJDmwLaifnO68+x+Jka+IAtyPr9Fe9kmuZh/an3XVnN8TkYZ9HeS6vhblHMfY4niUYOSl79F7XFlWVQrKs4Qga4XcRx2VtUIao1FV2xsUM9MRyQF0wLkADRdMKRJBDSBco2hUsq8Iqk5Awp9SyK4PSz1WA6Zh9Qq6q7dXXZU/wAVp8T6FJIqultg2b4uTE2UDagT50sHJySlBcRx/sohhcXWFw1o8XXjyRbngCTbfyWL4h2gfWePZlgpTDQWlz6huJ/lB1gXjVZ9Tb5cM559iyEcsI4lxQF3fgSQCAZGl2zF/SxQT6gcXVHOk9NGjaG/mVS4qmQ/+81HO7jgGiHRJBObLeAFOONtyy+owE3lsucZNg1g1OupEQuBGc5tzkblUnOMI8irNaBLSe85zpMgnMZi4sG6KNlGjOauHEQbtLswIvIDfe9UM2vn7xM89BqeQ+7oukdj4W5bFVV6lwuU0eynpoSo8l9Y/j4/gdlfhn/q1vDK/wD/AAiaWP4e33MNXqn+aQ355nAeirqfC8xcWuOsx/uiqXBwDJc70/JetpXmQU4vhngtZctNbKqecosKHF6nus9nhmcmQ9/ygZZ80fX4kXMLKYcA6Mz3nNUqf1O2b0H7ICjgWt0HVFhq0RriuTl26uU+FwiFtPkpQU8J8vIdFMzJDsXTVFSqTqCPEKcD75JDw1wxdum/4Th/MNTNo2+fqsLiamtwLidgPwu5k2hb7t23+HTdEw4jSYzDUWse6b+K87q1GzreeQ3uRYxfWeq8xrovzWfTfBpr8HH9/uzgg6GethF+UacyoK1SBqNATa1tx1/ZPWqAaW035DRUnEcaBaSen3ss1VLnI06m+MI5bJX1i9wbOsSeQmSYWtbxUGg2iyzKZBaN9wXE7k5iSVhMHTc4ytXwqhDhm0Nj4Gx+q9DptOq4nkNbrXZZF54TNBh60iPJcV9FyyiaZynxB2I5hKo6bjTQ+IVyL3JPkCquKGeEXVCFemIiL4Emydj0nQucyBk7boym4QgGmUSw8khkx5qz4S9zGPq/hygHq46eQcguHYOpVeGNaS46D8+ivO0lFtChSoNMkvL3OHxFoyk/0y6B/QUR7MetsSraLLh3GZsdVc0sSDcLzzCvI3KuMHxAttKtlBM4sLWuGa0VAZ5b/TReZ9pjWb3jhDSptcW52VGPDheA3QgWJ8ltqGOka3Q3F2Nq03U3OyzeQBYg21HMLLfp/MX1NVVyTPM8NxGXupse73i0ZtCRy5QREboKnWz1TUdf4QIgAA2ttzXOMwLsPUyuILgQ4ESQbzPNRUXri2Vbcxxg9boqa4yVkXng0tGtpoJ85RJxfXp4Qs7TrRvZE4eoXmG89dhry3WavQylLg7VmsrhHdN4Rs+zIz1HHbJOlrlu33or84VZ7szU9jNpmASSZtsBpC2FCu14ERygr02lqlRUos+feLX16vUuyPXCQEKEaBRmkrSpT6KEs6ffgr1I5sq8Fe1glMWnr6I32fRQup/f+6lkrcWgXIT9/qusnRSx92XQb0KeSCRZcb4c2vSNM2uC03MOGhgET+68f4tgnUHkPEwIluh2hoHuiwPmvb1n+McAbUMxO/3KwyohY8yPQU+IXaaOI8r4PEsVXqVDDGwOoHopMFwNxMumV6S7su0HT0U1Lggbsr6tPCC4Mup8UtueZGTwPCYjlrKuqOAtACvafD/u6Kp4PxPkr+Ec6UpzM1xGt3ACO83W3yzjmNJVezEgi/nt4ytfxLgftGyLOFwVja+HfRffuOncdx3Uj4T9yFW18HT0+o42y4f3JHuBQuItsiX4ulANei6nP/mUjLT1tY/6l0MPhX+7jAP/AJAB6HKoZNnnY7RVlt0reKtTwqn/AO8peTf+4kzCYNv+JjG+DCyfIZikP8REDpUiQtRwHsrVrQ6MjPxu0j+Ub/RdcG4hhWmMLhX137OcCG+INS4/ytV5jOK5QXY2sNO7hqV55Ztz/mIFtFHl8IhPVYWXx+pM04fDU3CmSGAfxK3xPjVlM8uot4lYfH404iqapED3Wtt3aY0A67+JU/GOJPxLrtyUx7tIWAgauPxHToNkOxi0117eWcPU6rzHhdHbWImlf7/dR0qanYyFNlCkS03kKYVzEHqoBeFIGga/7pYHvZnePcEznNP6ws9/wRwNj4L0s0RF7+O3RBVeHtnMJ8NvJQlXGXaybKtbbWuJYMVhuCyZdJPX9FfYPAhsQPvmrdmFv57QpqWGvt9VJQUeiE9ZZN+p5IqNAgQrXBPc0hQ06UXFvoiW/cFDKdzzkuaVXMOq6dTCr8I+DvCsZlUtYZqhLcuQVzIXL/v73ReWyhfT8vkmmJxBvZKPoin01wGA7qWSpxLYLl6SSoNzOS0Lh1EckySZFpDGgF02kAkkjIsI7yKs4rgGPHeAPySSTi+SNkU4mQxvChTJNJ5bNyIkHoQs9U4gzMWvw9J3UDKfnCSS1KEZdo5sr7Iflkzk1MPP/hW/9boXdLiFNrgGYWiDzcHO9JTpJ+TD4IvW3vjcWg4tiHjL7Ysb+GkBTHm25UdGkJ67ncp0lJJJcFLnKUvU8hAOnkpG/enVJJGB5ZPSUgunSUSeeBB334Kal+6SSAyEMP6rsJJJE8icwHX72SpsB+ykkkSRMxuy7NkySRP2DKIvCOYEySpkaqztxSLZ+iSSiW+5BF4UeWUklIqP/9k=">
+        </div>
+        <div class="card-content">
+            <span class="card-title">Triple Berry Smoothie</span>
+          <i class="fas fa-folder-open prefix green-text darken-1"></i><p>Fat Loss</p>
+          <i class="fas fa-clock prefix green-text darken-1"></i><p>5 Minutes</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://www.jessicagavin.com/wp-content/uploads/2020/01/acai-bowl-10-1200.jpg">
+        </div>
+        <div class="card-content">
+            <span class="card-title">Acai Bowl</span>
+          <i class="fas fa-folder-open prefix green-text darken-1"></i><p>Fat Loss</p>
+          <i class="fas fa-clock prefix green-text darken-1"></i><p>5 Minutes</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQJKsDeUYIjTQUpmN5UuF8nlT91tHZ1uBnt8g&usqp=CAU">
+        </div>
+        <div class="card-content">
+            <span class="card-title">Protein Smoothie</span>
+          <i class="fas fa-folder-open prefix green-text darken-1"></i><p>Build Muscle</p>
+          <i class="fas fa-clock prefix green-text darken-1"></i><p>5 Minutes</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Fitness/Galleries/10+Plant-Based+Recipes/slide-1.jpg">
+        </div>
+        <div class="card-content">
+            <span class="card-title">Sesame Tofu with Broccoli</span>
+          <i class="fas fa-folder-open prefix green-text darken-1"></i><p>Lean Gains</p>
+          <i class="fas fa-clock prefix green-text darken-1"></i><p>15 Minutes</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://blogscdn.thehut.net/app/uploads/sites/449/2020/07/HERO-Chicken-Katsu-1800x672_1593773821.jpg">
+        </div>
+        <div class="card-content">
+             <span class="card-title">Chicken Katsu Curry</span>
+          <i class="fas fa-folder-open prefix green-text darken-1"></i><p>Build Muscle</p>
+          <i class="fas fa-clock prefix green-text darken-1"></i><p>30 Minutes</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://www.t-nation.com/system/publishing/article_assets/5368/original/Overnight-Oats.jpg?ts=1499366788">
+        </div>
+        <div class="card-content">
+            <span class="card-title">Porridge Oats with Almond Nuts</span>
+          <i class="fas fa-folder-open prefix green-text darken-1"></i><p>Lean Gains</p>
+          <i class="fas fa-clock prefix green-text darken-1"></i><p>5 Minutes</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+    
+    
+{% endblock %}
+

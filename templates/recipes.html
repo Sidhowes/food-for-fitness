@@ -18,19 +18,16 @@
       <div class="card">
         <div class="card-image">
           <img src="{{ recipe.img_url }}">
-          <span class="card-title">{{ recipe.recipe_name }}</span>
         </div>
         <div class="card-content">
-          <p>{{ recipe.category_name }}</p>
-          <p>{{ recipe.recipe_description }}</p>
-          <p>{{ recipe.cook_time }}</p>
-          <p>{{ recipe.ingredients }}</p>
-          <p>{{ recipe.instructions }}</p>
+            <span class="card-title">{{ recipe.recipe_name }}</span>
+            <i class="fas fa-folder-open prefix green-text darken-1"></i><p>{{ recipe.category_name }}</p>
+            <i class="fas fa-clock prefix green-text darken-1"></i><p>{{ recipe.cook_time }}</p>
         </div>
         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small green accent-4">Edit</a>
         <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small red accent-4">Delete</a>
         <div class="card-action">
-          <a href="#">This is a link</a>
+        <a href="#">Read More</a>
         </div>
       </div>
     </div>

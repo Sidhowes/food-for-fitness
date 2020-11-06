@@ -2,8 +2,51 @@
 {% block content %}
 
 
+<!--recipe title-->
 <h1 class="green-text darken-1 center-align">{{ recipe.recipe_name }}</h1>
 
+<!--recipe img-->
+<img class="recipe-pic" src="{{ recipe.img_url }}" alt="">
+
+<!--recipe description-->
+<div class="description">
+    <h6>{{ recipe.recipe_description }}</h6>
+</div>
+
+<!--recipe ingredients-->
+<div class="ingredients">
+    <h4>Ingredients</h4>
+    <ul>
+        <!-- For each ingredient line -->
+        {% for line in recipe.ingredients.splitlines() %}
+        <li class="ingredient">
+            <p><i class="fas fa-seedling green-text darken-1"></i> {{line}}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!--recipe instructions-->
+<div class="ingredients">
+    <h4>Instructions</h4>
+    <ul>
+        <!-- For each instruction line -->
+        {% for line in recipe.instructions.splitlines() %}
+        <li class="instructions">
+            <p><i class="fas fa-chevron-circle-right green-text darken-1"></i> {{line}}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="cook-time">
+    <h4>Cook Time:</h4>
+    <p><i class="fas fa-clock prefix green-text darken-1"></i> {{ recipe.cook_time }}</p>
+</div>
+
+
+
+</div>
 
 
 

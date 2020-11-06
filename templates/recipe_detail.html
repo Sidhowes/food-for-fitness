@@ -10,12 +10,12 @@
 
 <!--recipe description-->
 <div class="description">
-    <h6>{{ recipe.recipe_description }}</h6>
+    <h4 class="green-text darken-1 center-align">{{ recipe.recipe_description }}</h4>
 </div>
 
 <!--recipe ingredients-->
 <div class="ingredients">
-    <h4>Ingredients</h4>
+    <h2 class="green-text darken-1">Ingredients</h2>
     <ul>
         <!-- For each ingredient line -->
         {% for line in recipe.ingredients.splitlines() %}
@@ -28,7 +28,7 @@
 
 <!--recipe instructions-->
 <div class="ingredients">
-    <h4>Instructions</h4>
+    <h2 class="green-text darken-1">Instructions</h2>
     <ul>
         <!-- For each instruction line -->
         {% for line in recipe.instructions.splitlines() %}
@@ -40,13 +40,15 @@
 </div>
 
 <div class="cook-time">
-    <h4>Cook Time:</h4>
+    <h2 class="green-text darken-1">Cook Time:</h2>
     <p><i class="fas fa-clock prefix green-text darken-1"></i> {{ recipe.cook_time }}</p>
 </div>
 
+<!--Edit/Delete btn-->
+<a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small green accent-4">Edit</a>
+<a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small red accent-4">Delete</a>
 
 
-</div>
 
 
 

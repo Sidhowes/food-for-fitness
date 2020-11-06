@@ -2,6 +2,16 @@
 
 h1 {
     font-family: Dancing Script;
+    margin: 0px;
+}
+
+nav .brand-logo {
+    padding-left: 3rem;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0px 60px 0px 60px;
 }
 
 .text-shadow {
@@ -35,7 +45,6 @@ social-links {
 
 .hero-image {
     width: 100%;
-    margin-top: 20px;
     height: 430px;
 }
 

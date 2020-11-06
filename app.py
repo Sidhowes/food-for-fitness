@@ -17,18 +17,18 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_recipes")
+@app.route("/get_recipes/home")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
-@app.route("/popular")
-def popular():
+@app.route("/recipes")
+def recipes():
     return render_template("popular_recipes.html")
 
 
-@app.route("/add_recipe", methods=["GET", "POST"])
+@app.route("/add_recipe/add", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
         recipe = {
@@ -48,7 +48,7 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
-@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+@app.route("/edit_recipe/<recipe_id>/edit", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
         submit = {
@@ -68,11 +68,17 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
-@app.route("/delete_recipe/<recipe_id>")
+@app.route("/delete_recipe/<recipe_id>/delete")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
+
+
+@app.route("/recipe_detail/<recipe_id>/detail")
+def recipe_detail(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("recipe_detail.html", recipe=recipe)
 
 
 if __name__ == "__main__":

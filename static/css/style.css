@@ -2,7 +2,7 @@
 
 h1, h4 {
     font-family: Dancing Script;
-    margin: 2.3733333333rem 0 1.424rem 0;
+    margin: 0 1.424rem 0;
 }
 
 nav .brand-logo {
@@ -52,8 +52,39 @@ social-links {
     font-family: Dancing script;
 }
 
+.index-image {
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(54,54,60);
+    background: linear-gradient(0deg, rgba(54,54,60,0.8673844537815126) 0%, rgba(86,93,101,0.8141631652661064) 51%, rgba(255,255,255,0) 100%);
+    color: #f1f1f1!important;
+    width: 100%;
+    transition: .5s ease-in-out;
+    opacity:0;
+    font-size: 1.4em;
+    padding: 25px 0 15px 0;
+    text-align: center
+}
+
+.col.s12.m4:hover .overlay {
+    opacity: 1;
+}
+
 .form-img {
     width: 100%;
+}
+
+small {
+    padding-left: 3rem;
 }
 
 .btn-small {

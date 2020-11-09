@@ -5,13 +5,16 @@ h1, h4 {
     margin: 0 1.424rem 0;
 }
 
+.flashes h4 {
+    line-height: 2;
+}
+
 nav .brand-logo {
     padding-left: 3rem;
 }
 
 .container-fluid {
     width: 100%;
-    padding: 0px 60px 0px 60px;
 }
 
 .text-shadow {
@@ -40,7 +43,7 @@ social-links {
 }
 
 .social-links a i:hover {
-    background: #43A047;
+    background: rgb(2, 97, 23);
 }
 
 .hero-image {
@@ -129,7 +132,30 @@ small {
     display: block;
 }
 
+.recipe-info {
+    padding-left: 20px;
+}
+
+.btn-update {
+    padding-left: 20px;
+}
+
 a {
     text-decoration: none;
     color: #4CAF50;
+}
+
+@media only screen and (max-width: 400px) {
+nav .brand-logo {
+    left: 43%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 23px;
+    }
+
+.recipe-pic {
+    height: 20rem;
+}
+
+
 }

@@ -25,7 +25,8 @@ def index():
 @app.route("/get_recipes/recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
-    return render_template("recipes.html", recipes=recipes)
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("recipes.html", recipes=recipes, categories=categories)
 
 
 @app.route("/add_recipe/add", methods=["GET", "POST"])

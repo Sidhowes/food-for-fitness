@@ -145,7 +145,13 @@ a {
     color: #4CAF50;
 }
 
+
 @media only screen and (max-width: 400px) {
+
+.hero-image {
+    height: 22rem;
+    }
+
 nav .brand-logo {
     left: 43%;
     -webkit-transform: translateX(-50%);
@@ -155,7 +161,5 @@ nav .brand-logo {
 
 .recipe-pic {
     height: 20rem;
-}
-
-
+    }
 }

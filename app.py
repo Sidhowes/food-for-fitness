@@ -82,6 +82,16 @@ def recipe_detail(recipe_id):
     return render_template("recipe_detail.html", recipe=recipe)
 
 
+@app.route("/recipes/<category>")
+def get_all(category):
+    if category == "all":
+        category = "All recipes"
+        recipe = mongo.db.recipe.find()
+    else:
+        recipe = mongo.db.recipe.find({"_id": ObjectId()})
+    return render_template("recipes.html", recipe=recipe)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), 
             port=int(os.environ.get("PORT")),

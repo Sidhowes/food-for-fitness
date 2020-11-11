@@ -3,24 +3,24 @@
 
 
 <!--recipe title-->
-<h1 class="green-text darken-1 center-align">{{ recipe.recipe_name }}</h1>
+<h1 class="green-text darken-1 center-align" style="margin: 20px;">{{ recipe.recipe_name }}</h1>
 
 <!--recipe img-->
 <img class="recipe-pic" src="{{ recipe.img_url }}" alt="">
 
 <!--recipe description-->
 <div class="description">
-    <h4 class="green-text darken-1 center-align">{{ recipe.recipe_description }}</h4>
+    <h4 class="green-text darken-1 center-align" style="margin: 20px;">{{ recipe.recipe_description }}</h4>
 </div>
 
 <!--recipe ingredients-->
 <div class="ingredients recipe-info">
-    <h2 class="green-text darken-1">Ingredients</h2>
+    <h3 class="green-text darken-1">Ingredients:</h3>
     <ul>
         <!-- For each ingredient line -->
         {% for line in recipe.ingredients.splitlines() %}
         <li class="ingredient">
-            <p><i class="fas fa-seedling green-text darken-1"></i> {{line}}</p>
+            <p><i class="fas fa-chevron-circle-right green-text darken-1"></i> {{line}}</p>
         </li>
         {% endfor %}
     </ul>
@@ -28,7 +28,7 @@
 
 <!--recipe instructions-->
 <div class="ingredients recipe-info">
-    <h2 class="green-text darken-1">Instructions</h2>
+    <h3 class="green-text darken-1">Instructions:</h3>
     <ul>
         <!-- For each instruction line -->
         {% for line in recipe.instructions.splitlines() %}
@@ -40,7 +40,7 @@
 </div>
 
 <div class="cook-time recipe-info">
-    <h2 class="green-text darken-1">Cook Time:</h2>
+    <h3 class="green-text darken-1">Cook Time:</h3>
     <p><i class="fas fa-clock prefix green-text darken-1"></i> {{ recipe.cook_time }}</p>
 </div>
 

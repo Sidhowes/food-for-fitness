@@ -72,7 +72,7 @@
 					<textarea id="ingredients" name="ingredients" minlength="5"
 		                    maxlength="800" class="materialize-textarea validate" required>
                                 {{- recipe.ingredients -}}</textarea>
-					<small class="form-text">Each ingredient on it's own line. No empty lines.</small>
+					<small class="form-text">Each ingredient on it's own line.</small>
 				</div>
 			</div>
             <!--Instructions-->
@@ -83,7 +83,7 @@
 					<textarea id="instructions" name="instructions" minlength="5"
 		                    maxlength="800" class="materialize-textarea validate" required>
                                 {{- recipe.instructions -}}</textarea>
-					<small class="form-text">Each ingredient on it's own line. No empty lines.</small>
+					<small class="form-text">Each ingredient on it's own line.</small>
 				</div>
 			</div>
             <!--submit btn-->
@@ -93,7 +93,8 @@
                     <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">
                         Cancel <i class="fas fa-times-circle right"></i>
                     </a>
-					<button class="btn-large green darken-1 text-shadow" type="submit">Edit Recipe
+                    <!--edit btn-->
+					<button class="edit btn-large green darken-1 text-shadow" type="submit">Edit Recipe
 					    <i class="fas fa-edit right"></i>
 					</button>
                 </div>

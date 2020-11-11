@@ -9,19 +9,21 @@
         <div class="recipe-headline col s12 center-align green-text darken-1">
             <h2>Our Delicious Recipes</h2>
         </div>
-			<div class="input-field col s12 right">
-				<select id="category_name" name="category_name">
-					    <option value="" disabled selected>Choose Category</option>
-					    <option value="{{ url_for('get_all', category='all') }}">ALL</option>
-					    <option value="{{ url_for('get_all', category='Fat Loss') }}">Fat Loss</option>
-					    <option value="{{ url_for('get_all', category='Lean Gains') }}">Lean Gains</option>
-					    <option value="{{ url_for('get_all', category='Build Muscle') }}">Build Muscle</option>
-					</select>
-			</div>
+        <div class="input-field col s12">
+            <a class="dropdown-trigger green darken-1 btn right" name="category_name" id="category_name" href="#" data-target="dropdown1">Choose Category</a>
+                <!-- Dropdown Structure -->
+                <ul id="dropdown1" class="dropdown-content">
+                    <li><a href="/recipes#category_name">All Recipes</a></li>
+                    <li><a href="/recipes?category=Fat Loss#category_name">Fat Loss</a></li>
+                    <li><a href="/recipes?category=Lean Gains#category_name">Lean Gains</a></li>
+                    <li><a href="/recipes?category=Build Muscle#category_name">Build Muscle</a></li>
+                </ul>
+        </div>
     </section>
 
     <div class="row">
         {% for recipe in recipes %}
+        
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image">

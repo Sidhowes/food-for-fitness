@@ -20,11 +20,15 @@ mongo = PyMongo(app)
 @app.route("/recipes/home")
 def index():
     return render_template("index.html")
-    
 
-@app.route("/get_recipes/recipes")
+
+@app.route("/recipes")
 def get_recipes():
-    recipes = list(mongo.db.recipes.find())
+    category = request.args.get('category')
+    if not category:
+        recipes = list(mongo.db.recipes.find())
+    else:
+        recipes = list(mongo.db.recipes.find({"category_name": category}))
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("recipes.html", recipes=recipes, categories=categories)
 
@@ -80,16 +84,6 @@ def delete_recipe(recipe_id):
 def recipe_detail(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("recipe_detail.html", recipe=recipe)
-
-
-@app.route("/recipes/<category>")
-def get_all(category):
-    if category == "all":
-        category = "All recipes"
-        recipe = mongo.db.recipe.find()
-    else:
-        recipe = mongo.db.recipe.find({"_id": ObjectId()})
-    return render_template("recipes.html", recipe=recipe)
 
 
 if __name__ == "__main__":

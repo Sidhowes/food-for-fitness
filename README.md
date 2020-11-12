@@ -187,6 +187,7 @@ Used force refresh to ensure everything was how I intended it to be.
 * [W3Cschools css validator](https://jigsaw.w3.org/css-validator/validator) - Validate my css code to make sure there are no errors.
 * [W3Cschools html validator](https://validator.w3.org/) - Validate my html code to make sure there are no errors.
 * [beautifytools javascript validator](http://beautifytools.com/javascript-validator.php) - Validate my javascript code.
+* [JSHint](https://jshint.com) - Check for errors.
 
 ## Deployment
 

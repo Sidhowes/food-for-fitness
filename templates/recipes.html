@@ -1,51 +1,45 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
-    <section>
-        <img class="hero-image" src="{{ url_for('static', filename='images/recipe_main_img.jpg') }}" alt="healthy image"> 
-    </section>
+<section>
+    <img class="hero-image" src="{{ url_for('static', filename='images/recipe_main_img.jpg') }}" alt="healthy image" />
+</section>
 
-    <section class="featured row">
-        <div class="recipe-headline col s12 center-align green-text darken-1">
-            <h2>Our Delicious Recipes</h2>
-        </div>
-        <div class="input-field col s12">
-            <a class="dropdown-trigger green darken-1 btn left" name="category_name" id="category_name" href="#" data-target="dropdown1">Choose Category</a>
-                <!-- Dropdown Structure -->
-                <ul id="dropdown1" class="dropdown-content">
-                    <li><a href="/recipes#all_recipes">All Recipes</a></li>
-                    <li><a href="/recipes?category=Fat Loss#fat_loss">Fat Loss</a></li>
-                    <li><a href="/recipes?category=Lean Gains#lean_gains">Lean Gains</a></li>
-                    <li><a href="/recipes?category=Build Muscle#build_muscle">Build Muscle</a></li>
-                </ul>
-        </div>
-    </section>
+<section class="featured row">
+    <div class="recipe-headline col s12 center-align green-text darken-1">
+        <h2>Our Delicious Recipes</h2>
+    </div>
+    <div class="input-field col s12">
+        <a class="dropdown-trigger green darken-1 btn left" name="category_name" id="category_name" href="#" data-target="dropdown1">Choose Category</a>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="/recipes#all_recipes">All Recipes</a></li>
+            <li><a href="/recipes?category=Fat Loss#fat_loss">Fat Loss</a></li>
+            <li><a href="/recipes?category=Lean Gains#lean_gains">Lean Gains</a></li>
+            <li><a href="/recipes?category=Build Muscle#build_muscle">Build Muscle</a></li>
+        </ul>
+    </div>
+</section>
 
-    <div class="row" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-        {% for recipe in recipes %}
-        
+<div class="row" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+    {% for recipe in recipes %}
+
     <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-        <a href="{{ url_for('recipe_detail', recipe_id=recipe._id) }}">
-          <img src="{{ recipe.img_url }}">
-        </a>
+        <div class="card">
+            <div class="card-image">
+                <a href="{{ url_for('recipe_detail', recipe_id=recipe._id) }}">
+                    <img src="{{ recipe.img_url }}" />
+                </a>
+            </div>
+            <div class="card-content">
+                <a href="{{ url_for('recipe_detail', recipe_id=recipe._id) }}">
+                    <span class="card-title">{{ recipe.recipe_name }}</span>
+                </a>
+                <div><i class="fas fa-folder-open prefix green-text darken-1"></i>{{ recipe.category_name }}</div>
+                <div><i class="fas fa-clock prefix green-text darken-1"></i>{{ recipe.cook_time }}</div>
+            </div>
         </div>
-        <div class="card-content">
-            <a href="{{ url_for('recipe_detail', recipe_id=recipe._id) }}">
-                <span class="card-title">{{ recipe.recipe_name }}</span>
-            </a>
-            <div><i class="fas fa-folder-open prefix green-text darken-1"></i>{{ recipe.category_name }}</div>
-            <div><i class="fas fa-clock prefix green-text darken-1"></i>{{ recipe.cook_time }}</div>
-        </div>
-      </div>
     </div>
-        {% endfor %}
-    </div>
+    {% endfor %}
+</div>
 
-
-
-    
-    
 {% endblock %}
-

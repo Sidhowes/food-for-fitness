@@ -1,108 +1,96 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <h1 class="green-text darken-1 center-align">Edit Recipe</h1>
 
-	<div class="row card-panel green lighten-5">
-		<form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+<div class="row card-panel green lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
         <!--Title-->
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="fas fa-heading prefix green-text darken-1"></i>
-					<input id="recipe_name" name="recipe_name" minlength="3" maxlength="50"
-		                    value="{{ recipe.recipe_name }}" type="text" class="validate" required>
-					<label for="recipe_name">Recipe Title</label>
-				</div>
-			</div>
-            <!--Category Dropdown-->
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="fas fa-folder-open prefix green-text darken-1"></i>
-					<select id="category_name" name="category_name" class="validate" required>
-					        <option value="" disabled>Choose Category</option>
-		                        {% for category in categories %}
-                                    {% if category.category_name == recipe.category_name %}
-                                        <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                                    {% else %}
-                                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                                    {% endif %}
-		                        {% endfor %}
-					    </select>
-					<label for="category_name">Category</label>
-				</div>
-			</div>
-            <!--Description-->
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="fas fa-align-left prefix green-text darken-1"></i>
-					<textarea id="recipe_description" name="recipe_description" minlength="5"
-		                    maxlength="500" class="materialize-textarea validate" required>
-                                {{- recipe.recipe_description -}}</textarea>
-					<label for="recipe_description">Description</label>
-					<small class="form-text">short description of the dish. max 500 words.</small>
-				</div>
-			</div>
-            <!--Image_Url-->
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="fas fa-image prefix green-text darken-1"></i>
-					<label for="img_url">Image Url</label>
-					<input required type="text" class="form-control validate" name="img_url" id="img_url"
-						    value="{{ recipe.img_url }}" aria-describedby="recipe description" required>
-					<small type="url" class="form-text">Picture of the dish.
-					        Use a valid URL</small>
-				</div>
-			</div>
-            <!--Cooking Time-->
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="fas fa-clock prefix green-text darken-1"></i>
-					<label for="cook_time">Cooking Time</label>
-					<input required type="text" class="form-control validate" id="cook_time"
-		                    name="cook_time" aria-describedby="cooking time"
-		                       value="{{ recipe.cook_time }}" placeholder="X hours X minutes" maxlength="20" required>
-					<small class="form-text">Example: "1 hour 10 minutes"</small>
-				</div>
-			</div>
-            <!--Ingredients-->
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="fas fa-align-left prefix green-text darken-1"></i>
-					<label for="ingredients">Ingredients</label>
-					<textarea id="ingredients" name="ingredients" minlength="5"
-		                    maxlength="800" class="materialize-textarea validate" required>
-                                {{- recipe.ingredients -}}</textarea>
-					<small class="form-text">Each ingredient on it's own line.</small>
-				</div>
-			</div>
-            <!--Instructions-->
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="fas fa-align-left prefix green-text darken-1"></i>
-					<label for="instructions">Instructions</label>
-					<textarea id="instructions" name="instructions" minlength="5"
-		                    maxlength="800" class="materialize-textarea validate" required>
-                                {{- recipe.instructions -}}</textarea>
-					<small class="form-text">Each ingredient on it's own line.</small>
-				</div>
-			</div>
-            <!--submit btn-->
-            <div class="row">
-                <div class="col s12 center-align">
-                    <!--cancel btn-->
-                    <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">
-                        Cancel <i class="fas fa-times-circle right"></i>
-                    </a>
-                    <!--edit btn-->
-					<button class="edit btn-large green darken-1 text-shadow" type="submit">Edit Recipe
-					    <i class="fas fa-edit right"></i>
-					</button>
-                </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-heading prefix green-text darken-1"></i>
+                <input id="recipe_name" name="recipe_name" minlength="3" maxlength="50" value="{{ recipe.recipe_name }}" type="text" class="validate" required />
+                <label for="recipe_name">Recipe Title</label>
             </div>
-		</form>
-	</div>
-    <div>
-        <img class="form-img" src="https://envato-shoebox-0.imgix.net/c534/bbd1-4890-4b46-969d-234242e589fd/MIX+FOOD_19_banner.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=700&s=c6d08906be2aa2076d903ceeede60516"
-            alt="healthy">
-    </div>
+        </div>
+        <!--Category Dropdown-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix green-text darken-1"></i>
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled>Choose Category</option>
+                    {% for category in categories %} {% if category.category_name == recipe.category_name %}
+                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                    {% else %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endif %} {% endfor %}
+                </select>
+                <label for="category_name">Category</label>
+            </div>
+        </div>
+        <!--Description-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix green-text darken-1"></i>
+                <textarea id="recipe_description" name="recipe_description" minlength="5" maxlength="500" class="materialize-textarea validate" required>                                {{- recipe.recipe_description -}}</textarea>
+                <label for="recipe_description">Description</label>
+                <small class="form-text">short description of the dish. max 500 words.</small>
+            </div>
+        </div>
+        <!--Image_Url-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-image prefix green-text darken-1"></i>
+                <label for="img_url">Image Url</label>
+                <input required type="text" class="form-control validate" name="img_url" id="img_url" value="{{ recipe.img_url }}" />
+                <small class="form-text">Picture of the dish. Use a valid URL</small>
+            </div>
+        </div>
+        <!--Cooking Time-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-clock prefix green-text darken-1"></i>
+                <label for="cook_time">Cooking Time</label>
+                <input required type="text" class="form-control validate" id="cook_time" name="cook_time" value="{{ recipe.cook_time }}" placeholder="X hours X minutes" maxlength="20" />
+                <small class="form-text">Example: "1 hour 10 minutes"</small>
+            </div>
+        </div>
+        <!--Ingredients-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix green-text darken-1"></i>
+                <label for="ingredients">Ingredients</label>
+                <textarea id="ingredients" name="ingredients" minlength="5" maxlength="800" class="materialize-textarea validate" required>                                {{- recipe.ingredients -}}</textarea>
+                <small class="form-text">Each ingredient on it's own line.</small>
+            </div>
+        </div>
+        <!--Instructions-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix green-text darken-1"></i>
+                <label for="instructions">Instructions</label>
+                <textarea id="instructions" name="instructions" minlength="5" maxlength="800" class="materialize-textarea validate" required>                                {{- recipe.instructions -}}</textarea>
+                <small class="form-text">Each ingredient on it's own line.</small>
+            </div>
+        </div>
+        <!--submit btn-->
+        <div class="row">
+            <div class="col s12 center-align">
+                <!--cancel btn-->
+                <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow"> Cancel <i class="fas fa-times-circle right"></i> </a>
+                <!--edit btn-->
+                <button class="edit btn-large green darken-1 text-shadow" type="submit">
+                    Edit Recipe
+                    <i class="fas fa-edit right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <img
+        class="form-img"
+        src="https://envato-shoebox-0.imgix.net/c534/bbd1-4890-4b46-969d-234242e589fd/MIX+FOOD_19_banner.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=700&s=c6d08906be2aa2076d903ceeede60516"
+        alt="healthy"
+    />
+</div>
 {% endblock %}

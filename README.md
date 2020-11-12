@@ -6,9 +6,11 @@ together if they feel the recipe is not a good standard.
 
 ![site logo](https://res.cloudinary.com/dnk59j2my/image/upload/v1603819267/Add_a_heading_7_c6upic.jpg)
 
-[Visit deployed site]
+[Visit deployed site](https://food-for-fitness.herokuapp.com/)
 
 ## Device Viewings
+
+![device viewings](static/wireframes/all_devices.png)
 
 
 
@@ -33,11 +35,48 @@ As a user I would like to:
 
 ## Wireframes
 
+### Home page
+
+![desktop view](static/wireframes/home_page_desktop.png)
 
 
+![ipad view](static/wireframes/home_page_ipad.png)
 
 
+![mobile view](static/wireframes/home_page_mobile.png)
 
+
+### Recipe page
+
+![desktop view](static/wireframes/recipe_page_desktop.png)
+
+
+![ipad view](static/wireframes/recipe_page_ipad.png)
+
+
+![mobile view](static/wireframes/recipe_page_mobile.png)
+
+
+### Specific Recipe detail
+
+![desktop view](static/wireframes/specific_recipe_desktop.png)
+
+
+![ipad view](static/wireframes/specific_recipe_ipad.png)
+
+
+![mobile view](static/wireframes/specific_recipe_mobile.png)
+
+
+### Add/Edit Recipe
+
+![desktop view](static/wireframes/add_recipe_desktop.png)
+
+
+![ipad view](static/wireframes/add_recipe_ipad.png)
+
+
+![mobile view](static/wireframes/add_recipe_mobile.png)
 
 
 ### Defensive Design
@@ -63,6 +102,15 @@ As a user I would like to:
 * Log in page.
 * Log out page.
 * Profile page.
+
+### Typogaphy
+For this website I only used two types of fonts from Google fonts as these are easy to use and import into the css folder.
+I used Dancing Script for headings and Open Sans Condensed for text.
+
+### Color Scheme
+For color I used a consistency of green (#4CAF50) lighten and dark. 
+This is so its not over bearing but instead simple and easy on the eye.
+
 
 ## Technologies used
 #### Below is a list of the programming languages, technologies, frameworks and resources used for this website.
